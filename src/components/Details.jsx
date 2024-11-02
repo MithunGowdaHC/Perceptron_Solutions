@@ -12,7 +12,8 @@ const Details = () => {
         "Lifetime Access"
       ],
       type: "Beginner Friendly",
-      image: "/api/placeholder/400/300"
+      image: "https://img.freepik.com/premium-photo/business-man-working-hard-stock-financial-trade-market-diagram_925707-2349.jpg?semt=ais_siglip"
+
     },
     {
       title: "Advanced Options Trading",
@@ -24,11 +25,12 @@ const Details = () => {
         "Free Strategy Videos"
       ],
       type: "Advanced Level",
-      image: "/api/placeholder/400/300"
+      image: "https://img.freepik.com/premium-photo/business-man-working-hard-stock-financial-trade-market-diagram_925707-2349.jpg?semt=ais_siglip"
+
     },
     {
       title: "Pro Trading Blueprint",
-      description: "Complete Trading System Development Course",
+      description: "Complete Trading System Development Course Complete Trading System Development Course",
       details: [
         "25+ Hours Expert Content",
         "Ready-to-use Strategies",
@@ -36,7 +38,8 @@ const Details = () => {
         "Trading Psychology"
       ],
       type: "Professional Level",
-      image: "/api/placeholder/400/300"
+      image: "https://img.freepik.com/premium-photo/business-man-working-hard-stock-financial-trade-market-diagram_925707-2349.jpg?semt=ais_siglip"
+
     }
   ];
 
