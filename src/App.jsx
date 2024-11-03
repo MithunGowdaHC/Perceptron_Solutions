@@ -5,6 +5,10 @@ import Courses from "./pages/Courses";
 
 import Navbar from "./components/Navbar"
 
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Login from "./pages/Login";
+
 
 const App = () => {
   return (
@@ -14,6 +18,10 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/courses" element={<Courses />} />
+        <Route path="/about" element={<About/>}/>
+        <Route path="/contact" element={<Contact/>}/>
+        <Route path="/login" element={<Login/>}/>
+
       </Routes>
     </div>
   );

@@ -28,29 +28,7 @@ const Header = () => {
               </button>
             </div>
 
-            {/* Trust Indicators
-            <div className="pt-6 sm:pt-8">
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                <div className="flex -space-x-4">
-                  {[1, 2, 3, 4].map((i) => (
-                    <div
-                      key={i}
-                      className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-white shadow-xl overflow-hidden ring-2 ring-indigo-50"
-                    >
-                      <div className="w-full h-full bg-gradient-to-br from-indigo-200 to-violet-200" />
-                    </div>
-                  ))}
-                </div>
-                <div>
-                  <p className="text-sm sm:text-base text-gray-900 font-semibold">
-                    20K+ People already trusted us
-                  </p>
-                  <p className="text-xs sm:text-sm text-gray-600">
-                    Join our growing community today
-                  </p>
-                </div>
-              </div>
-            </div> */}
+            
           </div>
 
           {/* Right Image Section */}
