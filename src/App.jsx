@@ -1,13 +1,15 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import Courses from "./pages/Courses";
+import Home from "./pages/Learner/Home";
+// import Courses from "./pages/Learner/Courses";
+import About from "./pages/Learner/About";
+import Contact from "./pages/Learner/Contact";
+import Login from "./pages/Learner/Login";
 
 import Navbar from "./components/Navbar"
+import Overview from "./pages/Tutor/Overview";
 
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Login from "./pages/Login";
+
 
 
 const App = () => {
@@ -17,10 +19,10 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/courses" element={<Courses />} />
         <Route path="/about" element={<About/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/login" element={<Login/>}/>
+        
 
       </Routes>
     </div>

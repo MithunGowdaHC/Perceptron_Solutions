@@ -89,7 +89,7 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 flex items-center justify-center p-4 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-tr from-slate-50 via-indigo-50 to-violet-100 flex items-center justify-center p-4 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute w-72 h-72 bg-indigo-200/30 rounded-full -top-12 -right-12 animate-blob" />

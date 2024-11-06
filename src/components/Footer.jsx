@@ -78,10 +78,13 @@ const Footer = () => {
   };
 
   return (
-    <footer className="max-w-6xl mx-auto px-4 py-12">
+    <>
+    <div className="block w-full h-[0.1rem] bg-red" ></div>
+    
+    <footer className=" bg-white mx-auto px-4 py-12">
       {/* Newsletter Section */}
-      <div className="text-center mb-12">
-        <h2 className="text-2xl text-gray-700 mb-2">JOIN ME</h2>
+      <div className="text-center  mb-12">
+        <h2 className="text-2xl  text-gray-700 mb-2">JOIN ME</h2>
         <p className="text-gray-600 mb-6">Be the first to hear about new courses!</p>
         
         <form onSubmit={handleSubmit} className="max-w-md mx-auto flex">
@@ -95,7 +98,7 @@ const Footer = () => {
           />
           <button
             type="submit"
-            className="px-6 py-2 bg-black text-white hover:bg-gray-800 transition-colors"
+            className="px-6 py-2 bg-gradient-to-r from-indigo-600 to-violet-600 text-black hover:bg-gray-800 transition-colors"
           >
             Join
           </button>
@@ -146,6 +149,7 @@ const Footer = () => {
         © {new Date().getFullYear()} BY PAVAN MIRLA
       </div>
     </footer>
+    </>
   );
 };
 

@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className=" block  w-full z-50 bg-white/90 backdrop-blur-md shadow-lg">
+    <nav className="   fixed  w-full z-50 bg-white/90 backdrop-blur-md shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
@@ -78,9 +78,11 @@ const Navbar = () => {
             </div>
           </div>
           <div className="hidden md:flex items-center gap-4">
+          <NavLink to={"/login"}>
             <button className="px-4 py-2 text-indigo-600 border border-indigo-600 rounded-lg transition-all duration-200 hover:bg-indigo-600 hover:text-white font-semibold">
-              <NavLink to={"/login"}>Login</NavLink> 
+              Login
             </button>
+            </NavLink>
             <button className="px-4 py-2 bg-gradient-to-r from-indigo-600 to-violet-600 text-white rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105 hover:from-indigo-700 hover:to-violet-700 font-semibold">
               Sign Up
             </button>

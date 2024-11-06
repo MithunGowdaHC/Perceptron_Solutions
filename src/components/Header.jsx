@@ -2,7 +2,10 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-slate-50 via-indigo-50 to-violet-50">
+    // bg-gradient-to-tr from-[#E8F0FF] via-[#F5E1FF] to-[#b49aae]
+    <div className="relative min-h-screen  ">
+
+
       <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 lg:pt-24 pb-8 sm:pb-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-[calc(100vh-4rem)]">
@@ -34,11 +37,11 @@ const Header = () => {
           {/* Right Image Section */}
           <div className="relative w-full max-w-xl mx-auto lg:mx-0 pt-8 sm:pt-12 lg:pt-16 lg:h-[calc(100vh-8rem)]">
             {/* Background decorative elements */}
-            <div className="absolute top-1/4 right-1/4 w-48 sm:w-72 h-48 sm:h-72 bg-indigo-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob" />
+            <div className="absolute top-1/4 right-1/4 w-48 sm:w-72 h-48 sm:h-72 bg-indigo-800 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob" />
             <div className="absolute top-1/3 right-1/3 w-48 sm:w-72 h-48 sm:h-72 bg-violet-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000" />
 
             {/* Main image container */}
-            <div className="relative z-10 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500 bg-gradient-to-br from-indigo-100 to-violet-100 p-2">
+            <div className="relative z-10 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl transform hover:scale-[1.03] transition-transform duration-300 bg-gradient-to-br from-indigo-100 to-violet-100 p-2">
               <img
                 src="https://miro.medium.com/v2/resize:fit:1100/1*1eyD_ZzkewkIzeiIlgZY_w.png"
                 alt="Pavan Mirla"
