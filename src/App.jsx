@@ -1,29 +1,25 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Learner/Home";
-// import Courses from "./pages/Learner/Courses";
-import About from "./pages/Learner/About";
-import Contact from "./pages/Learner/Contact";
-import Login from "./pages/Learner/Login";
 
-import Navbar from "./components/Navbar"
-import Overview from "./pages/Tutor/Overview";
+import Sidebar from "./admin/components/Sidebar";
+import Overview from "./admin/pages/Overview";
+import Home from "./user/pages/Home";
+import About from "./user/pages/About";
+import Contact from "./user/pages/Contact";
+import Login from "./user/pages/login";
 
-
-
+import Navbar from "./user/components/Navbar";
 
 const App = () => {
   return (
-    <div >
-      <Navbar/>
-
+    <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About/>}/>
-        <Route path="/contact" element={<Contact/>}/>
-        <Route path="/login" element={<Login/>}/>
-        
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
 
+        <Route path="/overview" element={<Overview />} />
       </Routes>
     </div>
   );
