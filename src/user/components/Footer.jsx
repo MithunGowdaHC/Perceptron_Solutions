@@ -81,7 +81,7 @@ const Footer = () => {
     <>
     <div className="block w-full h-[0.1rem] bg-red" ></div>
     
-    <footer className=" bg-white mx-auto px-4 py-12">
+    <footer className="  mx-auto px-4 py-12">
       {/* Newsletter Section */}
       <div className="text-center  mb-12">
         <h2 className="text-2xl  text-gray-700 mb-2">JOIN ME</h2>

@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="   block  w-full z-50 bg-white/90 backdrop-blur-md shadow-lg">
+    <nav className="    fixed  w-full z-50 bg-white/90 backdrop-blur-md shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
@@ -36,32 +36,12 @@ const Navbar = () => {
               >
                 Home
               </NavLink>
-              <div className="relative group">
-                <button
-                  onClick={toggleDropdown}
-                  className="flex items-center text-gray-700 hover:text-indigo-600 transition-colors font-semibold"
-                >
-                  Courses
-                  <ChevronDown className="ml-1 w-4 h-4" />
-                </button>
-                {/* Dropdown Menu */}
-                {dropdownOpen && (
-                  <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md z-10">
-                    <NavLink
-                      to={"/"}
-                      className="block px-4 py-2 text-gray-700 hover:bg-indigo-100"
-                    >
-                      Free Courses
-                    </NavLink>
-                    <NavLink
-                      to={"/"}
-                      className="block px-4 py-2 text-gray-700 hover:bg-indigo-100"
-                    >
-                      Premium Courses
-                    </NavLink>
-                  </div>
-                )}
-              </div>
+              <NavLink
+            to={"/all-courses"}
+            className="text-gray-700 hover:text-indigo-600 transition-colors font-semibold"
+          >
+            Courses
+          </NavLink>
 
               <NavLink
                 to={"/about"}
@@ -83,9 +63,9 @@ const Navbar = () => {
               Login
             </button>
             </NavLink>
-            <button className="px-4 py-2 bg-gradient-to-r from-indigo-600 to-violet-600 text-white rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105 hover:from-indigo-700 hover:to-violet-700 font-semibold">
+            {/* <button className="px-4 py-2 bg-gradient-to-r from-indigo-600 to-violet-600 text-white rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105 hover:from-indigo-700 hover:to-violet-700 font-semibold">
               Sign Up
-            </button>
+            </button> */}
           </div>
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
@@ -112,37 +92,19 @@ const Navbar = () => {
           >
             Home
           </NavLink>
-          <div className="relative group">
-            <button
-              onClick={toggleDropdown}
-              className="flex items-center text-gray-700 hover:text-indigo-600 transition-colors font-semibold"
-            >
-              Courses
-              <ChevronDown className="ml-1 w-4 h-4" />
-            </button>
-            {/* Dropdown Menu */}
-            {dropdownOpen && (
-              <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md z-10">
-                <NavLink
-                  to={"/"}
-                  className="block px-4 py-2 text-gray-700 hover:bg-indigo-100"
-                >
-                  Free Courses
-                </NavLink>
-                <NavLink
-                  to={"/"}
-                  className="block px-4 py-2 text-gray-700 hover:bg-indigo-100"
-                >
-                  Premium Courses
-                </NavLink>
-              </div>
-            )}
-          </div>
+          
+         
           <NavLink
             to={"/about"}
             className="text-gray-700 hover:text-indigo-600 transition-colors font-semibold"
           >
             About
+          </NavLink>
+          <NavLink
+            to={"/all-courses"}
+            className="text-gray-700 hover:text-indigo-600 transition-colors font-semibold"
+          >
+            Courses
           </NavLink>
           <NavLink
             to={"/contact"}
@@ -154,9 +116,9 @@ const Navbar = () => {
             <button className="w-full px-4 py-2 text-indigo-600 border border-indigo-600 rounded-lg transition-all duration-200 hover:bg-indigo-600 hover:text-white font-semibold">
               Login
             </button>
-            <button className="w-full px-4 py-2 bg-gradient-to-r from-indigo-600 to-violet-600 text-white rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105 hover:from-indigo-700 hover:to-violet-700 font-semibold">
+            {/* <button className="w-full px-4 py-2 bg-gradient-to-r from-indigo-600 to-violet-600 text-white rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105 hover:from-indigo-700 hover:to-violet-700 font-semibold">
               Sign Up
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

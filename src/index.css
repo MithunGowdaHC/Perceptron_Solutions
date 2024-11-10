@@ -3,3 +3,9 @@
 @tailwind utilities;
 
 
+/* index.css */
+@layer base {
+    body {
+      @apply bg-primaryBackground;
+    }
+  }
