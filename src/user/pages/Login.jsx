@@ -101,7 +101,7 @@ const Login = () => {
         onSubmit={(event) => {
           event.preventDefault();
         }}
-        className="animate-float bg-white/80 backdrop-blur-lg rounded-3xl shadow-2xl p-8 w-[90%] sm:max-w-96 flex flex-col gap-6 hover:shadow-indigo-200/50 transition-all duration-500  mt-24"
+        className="animate-float bg-white/80 backdrop-blur-lg rounded-3xl shadow-2xl p-8 w-[90%] sm:max-w-96 flex flex-col gap-6 hover:shadow-indigo-200/50 transition-all duration-500  "
       >
         <div className="flex items-center justify-center gap-3 mb-4 animate-slide-down">
           <h1 className="text-2xl text-gray-800 font-semibold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent animate-gradient">
