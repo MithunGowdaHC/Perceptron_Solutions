@@ -7,6 +7,8 @@ import Profile from "./user/pages/Profile";
 import Settings from "./user/pages/Settings";
 import CreateCourse from "./user/pages/CreateCourse";
 import EditCourse from "./user/pages/Editcourse";
+import LandingPageContent from "./user/pages/Landingpage";
+import CurriculumContent from "./user/pages/Curriculam";
 
 const Admin = () => {
   return (
@@ -20,6 +22,9 @@ const Admin = () => {
           <Route path="/settings" element={<Settings />} />
           <Route path="/create-new-course" element={<CreateCourse />} />
           <Route path="/edit-course/:courseId" element={<EditCourse />} />
+          <Route path="/create-new-course/landingpage" element={<LandingPageContent />} />
+          {/* <Route path="/create-new-course/settings" element={<Settings />} />
+          <Route path="/create-new-course/curriculum" element={<CurriculumContent />} /> */}
         </Routes>
       </div>
     </div>

@@ -23,7 +23,7 @@ const AllCourses = () => {
     <>
       <div className="w-full   h-screen  bg-white    text-black">
         {/* Hero Section */}
-        <BackgroundBeamsWithCollision>
+        {/* <BackgroundBeamsWithCollision>
           <section className="  px-20  flex flex-col justify-center   text-black ">
             <h1 className="text-4xl sm:text-6xl font-bold leading-tight tracking-wide text-indigo-600">
               Empowering Your Future
@@ -35,9 +35,10 @@ const AllCourses = () => {
             The best time to start building wealth was yesterday. The next best time is now.
             </p>
           </section>
-        </BackgroundBeamsWithCollision>
+        </BackgroundBeamsWithCollision> */}
 
         {/* Courses Section */}
+        {/* <h1>I Love YOU</h1> */}
         <section className="py-12 px-20 sm:px-6 lg:px-8">
           <div className=" px-20">
             <div className="flex flex-col sm:flex-row  justify-between items-center mb-8 bg-gray-50 mx-[18px] rounded-lg py-4  sm:px-6 shadow-md  w-[97%]">
@@ -49,7 +50,7 @@ const AllCourses = () => {
                   <button
                     key={type}
                     onClick={() => setFilter(type)}
-                    className={`px-4 py-1 rounded-full font-medium shadow-sm transition-all duration-300 ${
+                    className={`px-4 py-1  rounded-md font-medium shadow-sm transition-all duration-300 ${
                       filter === type
                         ? "bg-black text-white"
                         : "bg-gray-200 text-gray-700"

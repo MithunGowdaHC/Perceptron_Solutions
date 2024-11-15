@@ -13,6 +13,7 @@ import {
 import CurriculumContent from "./Curriculam";
 import LandingPageContent from "./Landingpage";
 import SettingsContent from "./Settings";
+import { Link } from "react-router-dom";
 
 const CreateCourse = () => {
   const [activeTab, setActiveTab] = useState("Curriculum");
@@ -56,7 +57,7 @@ const CreateCourse = () => {
           <div className="p-6">
             <div className="border-b mb-6">
               <nav className="flex gap-6">
-                {["Curriculum", "Course Landing Page", "Settings"].map(
+                {["Course Landing Page","Curriculum",  "Settings"].map(
                   (tab) => (
                     <button
                       key={tab}

@@ -8,6 +8,11 @@ const LandingPageContent = ({ courseData, onSubmit }) => {
     duration: "",
     category: "",
     level: "",
+    thumbnail: "",
+    instructors: "",
+    tags: [],
+    videoLink: "",
+    isPaid: false,
   });
 
   // Populate form data if courseData is provided (for editing)
@@ -20,6 +25,11 @@ const LandingPageContent = ({ courseData, onSubmit }) => {
         duration: courseData.duration || "",
         category: courseData.category || "",
         level: courseData.level || "",
+        thumbnail: courseData.thumbnail || "",
+        instructors: courseData.instructors || "",
+        tags: courseData.tags || [],
+        videoLink: courseData.videoLink || "",
+        isPaid: courseData.isPaid || false,
       });
     }
   }, [courseData]);
@@ -42,36 +52,32 @@ const LandingPageContent = ({ courseData, onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-3xl space-y-8">
+    <form onSubmit={handleSubmit} className="max-w-4xl mx-auto space-y-8">
       <div>
-        <h3 className="text-2xl font-semibold text-gray-800">Course Details</h3>
-        <p className="text-gray-500 mt-1">Create or edit your course landing page.</p>
+        <h3 className="text-3xl font-semibold text-gray-800">Create or Edit Your Course</h3>
+        <p className="text-gray-500 mt-1">Add all the details to showcase your course effectively.</p>
       </div>
 
       <div className="space-y-6">
         <div className="space-y-2">
-          <label className="block text-sm font-medium text-gray-700">
-            Course Title
-          </label>
+          <label className="block text-sm font-medium text-gray-700">Course Title</label>
           <input
             type="text"
             name="title"
             value={formData.title}
             onChange={handleChange}
-            placeholder="Enter an attractive title for your course"
+            placeholder="Enter a captivating course title"
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
           />
         </div>
 
         <div className="space-y-2">
-          <label className="block text-sm font-medium text-gray-700">
-            Course Description
-          </label>
+          <label className="block text-sm font-medium text-gray-700">Course Description</label>
           <textarea
             name="description"
             value={formData.description}
             onChange={handleChange}
-            placeholder="Describe what students will learn"
+            placeholder="Describe what students will learn in this course"
             rows={4}
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none resize-none"
           />
@@ -79,9 +85,7 @@ const LandingPageContent = ({ courseData, onSubmit }) => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-2">
-            <label className="block text-sm font-medium text-gray-700">
-              Course Price ($)
-            </label>
+            <label className="block text-sm font-medium text-gray-700">Course Price ($)</label>
             <input
               type="number"
               name="price"
@@ -93,9 +97,7 @@ const LandingPageContent = ({ courseData, onSubmit }) => {
           </div>
 
           <div className="space-y-2">
-            <label className="block text-sm font-medium text-gray-700">
-              Duration (hours)
-            </label>
+            <label className="block text-sm font-medium text-gray-700">Duration (hours)</label>
             <input
               type="number"
               name="duration"
@@ -107,9 +109,7 @@ const LandingPageContent = ({ courseData, onSubmit }) => {
           </div>
 
           <div className="space-y-2">
-            <label className="block text-sm font-medium text-gray-700">
-              Category
-            </label>
+            <label className="block text-sm font-medium text-gray-700">Category</label>
             <select
               name="category"
               value={formData.category}
@@ -126,9 +126,7 @@ const LandingPageContent = ({ courseData, onSubmit }) => {
           </div>
 
           <div className="space-y-2">
-            <label className="block text-sm font-medium text-gray-700">
-              Level
-            </label>
+            <label className="block text-sm font-medium text-gray-700">Level</label>
             <select
               name="level"
               value={formData.level}
@@ -141,7 +139,73 @@ const LandingPageContent = ({ courseData, onSubmit }) => {
               <option value="advanced">Advanced</option>
             </select>
           </div>
+
+          {/* <div className="space-y-2">
+            <label className="block text-sm font-medium text-gray-700">Course Thumbnail URL</label>
+            <input
+              type="url"
+              name="thumbnail"
+              value={formData.thumbnail}
+              onChange={handleChange}
+              placeholder="Add a thumbnail image URL"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+            />
+          </div> */}
+
+          <div className="space-y-2">
+            <label className="block text-sm font-medium text-gray-700">Instructors</label>
+            <input
+              type="text"
+              name="instructors"
+              value={formData.instructors}
+              onChange={handleChange}
+              placeholder="List of instructors, separated by commas"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+            />
+          </div>
+
+          {/* <div className="space-y-2">
+            <label className="block text-sm font-medium text-gray-700">Course Video URL</label>
+            <input
+              type="url"
+              name="videoLink"
+              value={formData.videoLink}
+              onChange={handleChange}
+              placeholder="Provide the video link for preview"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+            />
+          </div> */}
+
+          <div className="space-y-2">
+            <label className="block text-sm font-medium text-gray-700">Tags</label>
+            <input
+              type="text"
+              name="tags"
+              value={formData.tags.join(", ")}
+              onChange={(e) =>
+                setFormData((prev) => ({
+                  ...prev,
+                  tags: e.target.value.split(",").map((tag) => tag.trim()),
+                }))
+              }
+              placeholder="Add course tags separated by commas"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+            />
+          </div>
+
+         
         </div>
+        <div className="space-y-2">
+            <label className="block text-sm font-medium text-gray-700">Paid Course</label>
+            <input
+              type="checkbox"
+              name="isPaid"
+              checked={formData.isPaid}
+              onChange={(e) => setFormData((prev) => ({ ...prev, isPaid: e.target.checked }))}
+              className="h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-2 focus:ring-blue-500"
+            />
+            <span className="ml-2 text-sm">This is a paid course</span>
+          </div>
 
         <div className="pt-4">
           <button
