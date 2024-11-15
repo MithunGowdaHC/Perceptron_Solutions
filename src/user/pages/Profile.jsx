@@ -1,22 +1,25 @@
-import React from 'react';
+import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Pencil, 
-  Share2, 
-  Users, 
-  DollarSign, 
-  BookOpen,
-  TrendingUp
-} from 'lucide-react';
-import { courses } from '../../TestData/ProfileData';
+import { Pencil, Users, DollarSign, BookOpen, TrendingUp, Trash } from 'lucide-react';
+import { courses as initialCourses } from '../../TestData/ProfileData';
 
 const Profile = () => {
- 
+  const [courses, setCourses] = useState(initialCourses);
+
   // Calculate summary statistics
-  const totalStudents = courses.reduce((sum, course) => sum + course.students, 0);
+  const totalStudents = useMemo(() => courses.reduce((sum, course) => sum + course.students, 0), [courses]);
+
   const totalRevenue = courses.reduce((sum, course) => sum + course.revenue, 0);
   const totalCourses = courses.length;
   const activeStudents = courses.filter(course => course.students > 0).length;
+
+  const deleteCourse = (id) => {
+    if (window.confirm("Are you sure you want to delete this course?")) {
+      const updatedCourses = courses.filter(course => course.id !== id);
+      setCourses(updatedCourses);
+    }
+  };
+  
 
   const StatCard = ({ title, value, icon: Icon, trend }) => (
     <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
@@ -118,11 +121,16 @@ const Profile = () => {
                       </td>
                       <td className="py-4 px-4">
                         <div className="flex gap-2">
-                          <button className="p-2 hover:bg-blue-50 rounded-lg transition-colors group">
-                            <Pencil className="h-4 w-4 text-gray-400 group-hover:text-blue-600" />
-                          </button>
-                          <button className="p-2 hover:bg-blue-50 rounded-lg transition-colors group">
-                            <Share2 className="h-4 w-4 text-gray-400 group-hover:text-blue-600" />
+                          <Link to={`/admin/edit-course/${course.id}`}>
+                            <button className="p-2 hover:bg-blue-50 rounded-lg transition-colors group">
+                              <Pencil className="h-4 w-4 text-gray-400 group-hover:text-blue-600" />
+                            </button>
+                          </Link>
+                          <button 
+                            onClick={() => deleteCourse(course.id)} 
+                            className="p-2 hover:bg-red-50 rounded-lg transition-colors group"
+                          >
+                            <Trash className="h-4 w-4 text-gray-400 group-hover:text-red-600" />
                           </button>
                         </div>
                       </td>

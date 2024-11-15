@@ -6,6 +6,7 @@ import Sidebar from "./user/components/Sidebar";
 import Profile from "./user/pages/Profile";
 import Settings from "./user/pages/Settings";
 import CreateCourse from "./user/pages/CreateCourse";
+import EditCourse from "./user/pages/Editcourse";
 
 const Admin = () => {
   return (
@@ -18,6 +19,7 @@ const Admin = () => {
           <Route path="/profile" element={<Profile />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/create-new-course" element={<CreateCourse />} />
+          <Route path="/edit-course/:courseId" element={<EditCourse />} />
         </Routes>
       </div>
     </div>
