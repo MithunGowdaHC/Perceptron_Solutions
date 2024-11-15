@@ -1,10 +1,11 @@
+// Sidebar.jsx
 import React, { useState } from 'react';
 import { Home, User, Settings, LogOut, Menu } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   const [activeItem, setActiveItem] = useState('dashboard');
-  const [isOpen, setIsOpen] = useState(false); // State to handle mobile toggle
+  const [isOpen, setIsOpen] = useState(true);
 
   const handleItemClick = (item) => {
     setActiveItem(item);
@@ -21,11 +22,11 @@ const Sidebar = () => {
         className="sm:hidden fixed top-4 left-4 z-50 bg-gray-900 text-white p-2 rounded-md"
         onClick={toggleSidebar}
       >
+        
         <Menu size={24} />
       </button>
-
       <div
-        className={`block top-0 left-0 h-screen bg-gray-900 text-white transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 left-0 h-screen bg-gray-900 text-white transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         } sm:translate-x-0 w-20 sm:w-64 z-40`}
       >
@@ -33,18 +34,16 @@ const Sidebar = () => {
         <div className="flex items-center justify-center sm:justify-between px-4 py-6 border-b border-gray-800">
           <span className="text-xl font-bold sm:block hidden">😎 Pavan Mirla</span>
         </div>
-
         {/* Navigation Links */}
         <div className="flex-1 py-6">
           <nav>
             {[
-              { name: 'Dashboard', icon: Home, id: '/' },
+              { name: 'Dashboard', icon: Home, id: 'dashboard' },
               { name: 'Profile', icon: User, id: 'profile' },
-              { name: 'Settings', icon: Settings, id: 'settings' },
             ].map((item) => (
-              <Link to={`/${item.id}`}
+              <Link
+                to={`/admin/${item.id}`}
                 key={item.id}
-                
                 className={`flex items-center px-4 py-3 ${
                   activeItem === item.id ? 'bg-gray-800' : 'hover:bg-gray-800'
                 }`}
@@ -56,7 +55,6 @@ const Sidebar = () => {
             ))}
           </nav>
         </div>
-
         {/* Logout Link */}
         <div className="px-4 py-3 border-t border-gray-800">
           <Link
@@ -69,7 +67,6 @@ const Sidebar = () => {
           </Link>
         </div>
       </div>
-
       {/* Overlay for mobile when sidebar is open */}
       {isOpen && (
         <div

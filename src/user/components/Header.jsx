@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const Header = () => {
   const words = [
     {
-      text: "Improve Your Online",
+      text: "Improve Your Online ",
       className: "text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white tracking-tight",
     },
     {
@@ -29,7 +29,7 @@ const Header = () => {
   ].map(word => [word]); // Wrap each word in an array for TypewriterEffectSmooth
 
   return (
-    <div className="relative w-full overflow-hidden bg-white dark:bg-gray-950">
+    <div className="relative w-full overflow-hidden  pt-9  dark:bg-gray-950">
       <BackgroundBeamsWithCollision>
         <div className="relative min-h-screen">
           {/* Subtle grid background */}

@@ -16,7 +16,7 @@ const AllCourses = () => {
       ? course.isPaid
       : !course.isPaid
   );
-  const words = `Dive deep into options trading and futures with expert-led courses designed to transform your financial journey.  Learn strategies,  analyze trends, and master the market!`;
+  const words = `Straight to Action!`;
   // const words2 = `The best time to start building wealth was yesterday. The next best time is now.`;
 
   return (
@@ -26,7 +26,7 @@ const AllCourses = () => {
         <BackgroundBeamsWithCollision>
           <section className="  px-20  flex flex-col justify-center   text-black ">
             <h1 className="text-4xl sm:text-6xl font-bold leading-tight tracking-wide text-indigo-600">
-              Empowering Your Future With Knowledge
+              Empowering Your Future
             </h1>
             <p className="text-lg sm:text-xl mt-4  text-gray-700">
               <TextGenerateEffect words={words} />
