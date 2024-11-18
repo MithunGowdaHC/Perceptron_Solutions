@@ -1,8 +1,3 @@
-// import React, { useState } from "react";
-
-
-
-
 import React, { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { GoogleLogin } from "@react-oauth/google";
