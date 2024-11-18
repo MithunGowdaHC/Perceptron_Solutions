@@ -4,15 +4,6 @@
 
 // const Login = () => {
 
-//     <form
-//       onSubmit={(event) => {
-//         event.preventDefault();
-//    
-//         
-//         type="password"
-//         className=" w-full px-3 py-2 border border-gray-800 "
-//         placeholder="Password"
-//         required
 //       />
 
 //       <div className=" w-full flex justify-between text-sm mt-[-8px]">
