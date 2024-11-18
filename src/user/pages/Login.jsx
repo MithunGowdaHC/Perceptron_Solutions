@@ -3,9 +3,7 @@
 // import { jwtDecode } from "jwt-decode";
 
 // const Login = () => {
-//   const [currentState, setCurrentState] = useState("Sign Up");
 
-//   return (
 //     <form
 //       onSubmit={(event) => {
 //         event.preventDefault();
