@@ -2,12 +2,6 @@
 // import { GoogleLogin } from "@react-oauth/google";
 // import { jwtDecode } from "jwt-decode";
 
-// const Login = () => {
-
-//       />
-
-//       <div className=" w-full flex justify-between text-sm mt-[-8px]">
-
 
 
 
