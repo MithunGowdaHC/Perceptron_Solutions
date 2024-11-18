@@ -52,15 +52,6 @@
 //           >
 //             Already a user? Log In
 //           </p>
-//         ) : (
-//           <p
-//             className=" cursor-pointer"
-//             onClick={() => setCurrentState("Sign Up")}
-//           >
-//            New User ? Create acount
-//           </p>
-//         )}
-//       </div>
 
 
 
