@@ -8,17 +8,7 @@
 //       onSubmit={(event) => {
 //         event.preventDefault();
 //    
-//         />
-//       ) : (
-//         ""
-//       )}
-//       <input
-//         type="email"
-//         className=" w-full px-3 py-2 border border-gray-800 "
-//         placeholder="Email"
-//         required
-//       />
-//       <input
+//         
 //         type="password"
 //         className=" w-full px-3 py-2 border border-gray-800 "
 //         placeholder="Password"
