@@ -40,18 +40,6 @@
 //       />
 
 //       <div className=" w-full flex justify-between text-sm mt-[-8px]">
-//       {currentState === "Log In" ? (
-//         <p>Forgot Password</p>
-//       ) : (
-//         ""
-//       )}
-//         {currentState === "Sign Up" ? (
-//           <p
-//             className=" cursor-pointer"
-//             onClick={() => setCurrentState("Log In")}
-//           >
-//             Already a user? Log In
-//           </p>
 
 
 
