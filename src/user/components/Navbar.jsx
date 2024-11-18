@@ -21,12 +21,12 @@ const Navbar = () => {
                   <BookOpen className="w-6 h-6 text-white" />
                 </div>
 
-                <Link
+                <NavLink
                   to={"/"}
                   className=" cursor-pointer text-2xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent"
                 >
                   Perceptron
-                </Link>
+                </NavLink>
               </div>
             </div>
             <div className="hidden md:flex md:ml-60 space-x-8">
@@ -34,38 +34,39 @@ const Navbar = () => {
                 to={"/"}
                 className="text-gray-800 hover:text-indigo-600 transition-colors font-semibold"
               >
-                Home
+                <p>HOME</p>
+                <hr className=" w-2/4 h-[1.5px] m-auto  hidden  border-none bg-black "/>
               </NavLink>
               <NavLink
-            to={"/all-courses"}
-            className="text-gray-700 hover:text-indigo-600 transition-colors font-semibold"
-          >
-            Courses
-          </NavLink>
+                to={"/all-courses"}
+                className="text-gray-800 hover:text-indigo-600 transition-colors font-semibold"
+              >
+                <p>COURSES</p>
+                <hr className=" w-2/4 h-[1.5px] m-auto  hidden  border-none bg-black "/>
+              </NavLink>
 
               <NavLink
                 to={"/about"}
                 className="text-gray-800 hover:text-indigo-600 transition-colors font-semibold"
               >
-                About
+                <p>ABOUT</p>
+                <hr className=" w-2/4 m-auto h-[1.5px] hidden  border-none bg-black "/>
               </NavLink>
               <NavLink
                 to={"/contact"}
                 className="text-gray-800 hover:text-indigo-600 transition-colors font-semibold"
               >
-                Contact
+                <p>CONTACT</p>
+                <hr className=" w-2/4 h-[1.5px]  m-auto  hidden border-none bg-black "/>
               </NavLink>
             </div>
           </div>
           <div className="hidden md:flex items-center gap-4">
-          <NavLink to={"/login"}>
-            <button className="px-4 py-2 text-indigo-600 border border-indigo-600 rounded-lg transition-all duration-200 hover:bg-indigo-600 hover:text-white font-semibold">
-              Login
-            </button>
+            <NavLink to={"/login"}>
+              <button className="px-4 py-2 text-indigo-600 border border-indigo-600 rounded-lg transition-all duration-200 hover:bg-indigo-600 hover:text-white font-semibold">
+                Login
+              </button>
             </NavLink>
-            {/* <button className="px-4 py-2 bg-gradient-to-r from-indigo-600 to-violet-600 text-white rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105 hover:from-indigo-700 hover:to-violet-700 font-semibold">
-              Sign Up
-            </button> */}
           </div>
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
@@ -92,8 +93,7 @@ const Navbar = () => {
           >
             Home
           </NavLink>
-          
-         
+
           <NavLink
             to={"/about"}
             className="text-gray-700 hover:text-indigo-600 transition-colors font-semibold"
@@ -112,14 +112,13 @@ const Navbar = () => {
           >
             Contact
           </NavLink>
+          <NavLink to={"/login"}>
           <div className="flex flex-col gap-2">
             <button className="w-full px-4 py-2 text-indigo-600 border border-indigo-600 rounded-lg transition-all duration-200 hover:bg-indigo-600 hover:text-white font-semibold">
               Login
             </button>
-            {/* <button className="w-full px-4 py-2 bg-gradient-to-r from-indigo-600 to-violet-600 text-white rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105 hover:from-indigo-700 hover:to-violet-700 font-semibold">
-              Sign Up
-            </button> */}
           </div>
+          </NavLink>
         </div>
       </div>
     </nav>

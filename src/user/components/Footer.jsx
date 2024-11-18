@@ -1,155 +1,150 @@
-// import React from "react";
-// import { useState } from "react";
-
-// const Footer = () => { const [email, setEmail] = useState('');
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     // Handle email submission
-//     console.log('Email submitted:', email);
-//     setEmail('');
-//   };
-//   return (
-//     <div className="max-w-7xl mt-10 mx-auto px-4 sm:px-6 lg:px-8    ">
-//       <div className="text-center mb-12">
-//         <h2 className="text-2xl text-gray-700 mb-2">JOIN ME</h2>
-//         <p className="text-gray-600 mb-6">Be the first to hear about new courses!</p>
-        
-//         <form onSubmit={handleSubmit} className="max-w-md mx-auto flex">
-//           <input
-//             type="email"
-//             value={email}
-//             onChange={(e) => setEmail(e.target.value)}
-//             placeholder="Enter your email here*"
-//             className="flex-1 px-4 py-2 border border-gray-300 focus:outline-none focus:border-gray-500"
-//             required
-//           />
-//           <button
-//             type="submit"
-//             className="px-6 py-2 bg-black text-white hover:bg-gray-800 transition-colors"
-//           >
-//             Join
-//           </button>
-//         </form>
-//       </div>
-//       <div className=" flex flex-col sm:grid  grid-cols-[3fr_1fr_1fr] gap-14  my-10  text-sm ">
-      
-        
-//         <div>
-//             <p className=" text-xl font-medium mb-5">COMPANY</p>
-//             <ul className=" flex flex-col gap-1 text-gray-600">
-//                 <li>Home</li>
-//                 <li>About us</li>
-//                 <li>Delivery</li>
-//                 <li>Privacy Policy</li>
-//             </ul>
-//         </div>
-//         <div>
-//             <p className=" text-xl  font-medium mb-5">GET IN TOUCH</p>
-//             <ul className=" flex flex-col gap-1 text-gray-600">
-//                 <li>+1-5454-5845</li>
-//                 <li>contact@trenduraforyou.com</li>
-
-//             </ul>
-//         </div>
-        
-//       </div>
-//       <div>
-//         <hr />
-//         <div className="text-center text-sm text-gray-600">
-//         © {new Date().getFullYear()} BY PAVAN MIRLA
-//       </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Footer;
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { Send, Facebook, Twitter, Linkedin, Github, Mail, MapPin, Phone } from "lucide-react";
 
 const Footer = () => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle email submission
-    console.log('Email submitted:', email);
-    setEmail('');
+    console.log("Email submitted:", email);
+    setEmail("");
   };
 
   return (
-    <>
-    <div className="block w-full h-[0.1rem] bg-red" ></div>
-    
-    <footer className="  mx-auto px-4 py-12">
+    <footer className="bg-gradient-to-b from-gray-900 to-black text-white relative">
       {/* Newsletter Section */}
-      <div className="text-center  mb-12">
-        <h2 className="text-2xl  text-gray-700 mb-2">JOIN ME</h2>
-        <p className="text-gray-600 mb-6">Be the first to hear about new courses!</p>
-        
-        <form onSubmit={handleSubmit} className="max-w-md mx-auto flex">
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email here*"
-            className="flex-1 px-4 py-2 border border-gray-300 focus:outline-none focus:border-gray-500"
-            required
-          />
-          <button
-            type="submit"
-            className="px-6 py-2 bg-gradient-to-r from-indigo-600 to-violet-600 text-black hover:bg-gray-800 transition-colors"
-          >
-            Join
-          </button>
-        </form>
-      </div>
-
-      {/* Navigation Links */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-        {/* About Column */}
-        <div className="text-center">
-          <h3 className="font-medium text-gray-700 mb-4">ABOUT</h3>
-          <ul className="space-y-2">
-            <li>
-              <a href="/my-story" className="text-gray-600 hover:text-gray-800">MY STORY</a>
-            </li>
-            <li>
-              <a href="/blog" className="text-gray-600 hover:text-gray-800">BLOG</a>
-            </li>
-            <li>
-              <a href="/stockists" className="text-gray-600 hover:text-gray-800">STOCKISTS</a>
-            </li>
-          </ul>
+      <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+        <div className="relative">
+          <div className="absolute inset-0 flex items-center" aria-hidden="true">
+            <div className="w-full border-t border-gray-800"></div>
+          </div>
+          <div className="relative flex justify-center">
+            <span className="bg-gray-900 px-6 text-lg font-semibold text-gray-300 hover:text-white transition-colors duration-300">
+              Stay Connected
+            </span>
+          </div>
         </div>
 
-        {/* Help Column */}
-        <div className="text-center">
-          <h3 className="font-medium text-gray-700 mb-4">HELP</h3>
-          <ul className="space-y-2">
-            <li>
-              <a href="/contact" className="text-gray-600 hover:text-gray-800">CONTACT</a>
-            </li>
-            <li>
-              <a href="/wholesale" className="text-gray-600 hover:text-gray-800">WHOLESALE</a>
-            </li>
-          </ul>
-        </div>
-
-        {/* About Text Section */}
-        <div className="col-span-2 text-center md:text-left">
-          <p className="text-gray-600 text-sm leading-relaxed">
-          Hello. My name is Pavan Mirla. I am a Machine Learning Data Scientist with Investment research and Quantitative analysis experience at large Canadian Asset Management Firms.
+        <div className="mt-10 text-center">
+          <p className="text-gray-400 mb-8 text-sm transform hover:scale-105 transition-transform duration-300">
+            Join our newsletter for the latest insights in AI, Machine Learning, and Quantitative Finance
           </p>
+          <form onSubmit={handleSubmit} className="flex items-center justify-center max-w-md mx-auto group">
+            <div className="relative flex-1">
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your email"
+                className="w-full px-4 py-3 bg-gray-800/50 text-white rounded-l-lg border border-gray-700 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-300 placeholder:text-gray-500 hover:border-blue-400"
+                required
+              />
+            </div>
+            <button
+              type="submit"
+              className="px-6 py-3 bg-blue-600 text-white rounded-r-lg hover:bg-blue-700 transition-all duration-300 flex items-center gap-2 group-hover:gap-3 hover:scale-105"
+            >
+              Subscribe
+              <Send className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </button>
+          </form>
         </div>
       </div>
 
-      {/* Copyright */}
-      <div className="text-center text-sm text-gray-600">
-        © {new Date().getFullYear()} BY PAVAN MIRLA
+      {/* Main Content */}
+      <div className="border-t border-gray-800 bg-gray-900/50 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-12">
+            {/* Navigation Links */}
+            <div className="space-y-6">
+              <h3 className="text-lg font-semibold text-white relative inline-block group">
+                Navigation
+                <span className="absolute -bottom-2 left-0 w-12 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
+              </h3>
+              <ul className="space-y-3">
+                {['Home', 'About Us', 'Services', 'Features'].map((item) => (
+                  <li key={item} className="transform hover:translate-x-2 transition-transform duration-300">
+                    <Link to={`/${item.toLowerCase().replace(' ', '-')}`} className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 group">
+                      <span className="w-0 group-hover:w-2 h-[2px] bg-blue-500 transition-all duration-300"></span>
+                      <span>{item}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Contact Information */}
+            <div className="space-y-6">
+              <h3 className="text-lg font-semibold text-white relative inline-block group">
+                Contact
+                <span className="absolute -bottom-2 left-0 w-12 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
+              </h3>
+              <ul className="space-y-4">
+                {[
+                  { Icon: Phone, text: '+1-5454-5845' },
+                  { Icon: Mail, text: 'perceptron.solutions', href: 'https://www.perceptron.solutions' },
+                  { Icon: MapPin, text: 'Vancouver, British Columbia, Canada' }
+                ].map(({ Icon, text, href }, index) => (
+                  <li key={index} className="flex items-center gap-3 text-gray-400 group hover:transform hover:translate-x-2 transition-all duration-300">
+                    <Icon className="w-4 h-4 text-blue-500 group-hover:scale-110 transition-transform duration-300" />
+                    {href ? (
+                      <a href={href} className="hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
+                        {text}
+                      </a>
+                    ) : (
+                      <span className="group-hover:text-white transition-colors">{text}</span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* About Section */}
+            <div className="space-y-6">
+              <h3 className="text-lg font-semibold text-white relative inline-block group">
+                About Me
+                <span className="absolute -bottom-2 left-0 w-12 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed hover:text-white transition-colors duration-300">
+                Hello. My name is Pavan Mirla. I am a Machine Learning Data
+                Scientist with investment research and quantitative analysis
+                experience at large Canadian Asset Management Firms.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Footer Bottom - Now integrated with main design */}
+      <div className="border-t border-gray-800 bg-black/80 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div className="flex space-x-8">
+              {[
+                { icon: Facebook, href: 'https://www.facebook.com/pavanmirla' },
+                { icon: Twitter, href: 'https://twitter.com/pavanmirla' },
+                { icon: Github, href: 'https://github.com/pmirla' },
+                { icon: Linkedin, href: 'https://www.linkedin.com/in/pavanmirla/' }
+              ].map(({ icon: Icon, href }, index) => (
+                <a
+                  key={index}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-all duration-300 hover:scale-125"
+                >
+                  <Icon className="w-5 h-5" />
+                </a>
+              ))}
+            </div>
+            <p className="text-sm text-gray-400 hover:text-white transition-colors duration-300">
+              © {new Date().getFullYear()} BY PAVAN MIRLA
+            </p>
+          </div>
+        </div>
       </div>
     </footer>
-    </>
   );
 };
 

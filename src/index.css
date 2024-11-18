@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+a.active hr{
+  display: block
+}
 /* index.css */
 @layer base {
     body {

@@ -29,7 +29,7 @@ const Header = () => {
   ].map(word => [word]); // Wrap each word in an array for TypewriterEffectSmooth
 
   return (
-    <div className="relative w-full overflow-hidden  pt-9  dark:bg-gray-950">
+    <div className="relative w-full overflow-hidden   pt-12  dark:bg-gray-950">
       <BackgroundBeamsWithCollision>
         <div className="relative min-h-screen">
           {/* Subtle grid background */}
