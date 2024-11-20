@@ -11,7 +11,7 @@ import {
   Image as ImageIcon,
 } from "lucide-react";
 import CurriculumContent from "./Curriculam";
-import LandingPageContent from "./Landingpage";
+import LandingPageContent from "../../user/pages/Landingpage";
 import SettingsContent from "./Settings";
 import { Link } from "react-router-dom";
 

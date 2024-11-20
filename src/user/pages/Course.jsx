@@ -96,7 +96,7 @@ const Course = () => {
           </div>
 
           {/* Video Player */}
-          <div className="relative aspect-video w-full max-w-5xl mx-auto rounded-xl overflow-hidden shadow-2xl mb-8">
+          <div className="relative aspect-video w-full max-w-5xl mx-auto rounded-xl overflow-hidden shadow-2xl mb-8 pb-1">
             {!isPlaying ? (
               <div
                 className="relative h-full cursor-pointer group"

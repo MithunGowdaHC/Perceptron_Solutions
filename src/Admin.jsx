@@ -1,14 +1,16 @@
-// Admin.jsx
+
 import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import Dashboard from "./user/pages/Dashboard";
-import Sidebar from "./user/components/Sidebar";
-import Profile from "./user/pages/Profile";
-import Settings from "./user/pages/Settings";
-import CreateCourse from "./user/pages/CreateCourse";
-import EditCourse from "./user/pages/Editcourse";
+import Dashboard from "./admin/pages/Dashboard";
+import Profile from "./admin/pages/Profile";
+import Settings from "./admin/pages/Settings";
+import CreateCourse from "./admin/pages/CreateCourse";
+import EditCourse from "./admin/pages/EditCourse";
 import LandingPageContent from "./user/pages/Landingpage";
-import CurriculumContent from "./user/pages/Curriculam";
+import Sidebar from "./admin/components/Sidebar";
+
+
+
 
 const Admin = () => {
   return (
@@ -23,8 +25,7 @@ const Admin = () => {
           <Route path="/create-new-course" element={<CreateCourse />} />
           <Route path="/edit-course/:courseId" element={<EditCourse />} />
           <Route path="/create-new-course/landingpage" element={<LandingPageContent />} />
-          {/* <Route path="/create-new-course/settings" element={<Settings />} />
-          <Route path="/create-new-course/curriculum" element={<CurriculumContent />} /> */}
+          
         </Routes>
       </div>
     </div>
