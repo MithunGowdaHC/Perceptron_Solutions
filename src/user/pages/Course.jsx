@@ -240,3 +240,83 @@ const Course = () => {
 };
 
 export default Course;
+
+// import React, { useContext, useEffect, useState } from "react";
+// import { useParams } from "react-router-dom";
+// import { AppContext } from "../context/AppContext";
+// import { PlayCircle } from "lucide-react";
+
+// import TextHoverEffect from "../components/ui/text-hover-effect";
+
+// const Course = () => {
+//   const { courseId } = useParams();
+//   const { courses } = useContext(AppContext);
+//   const [courseData, setCourseData] = useState(null);
+//   const [isPlaying, setIsPlaying] = useState(false);
+
+//   const fetchCourseData = () => {
+//     const course = courses.find((course) => course.id === Number(courseId));
+//     if (course) {
+//       setCourseData(course);
+//     }
+//   };
+
+//   useEffect(() => {
+//     fetchCourseData();
+//   }, [courses, courseId]);
+
+//   if (!courseData) {
+//     return <div className="opacity-0"></div>;
+//   }
+
+//   return (
+//     <div className="min-h-screen bg-white font-sans">
+//       {/* Hero Section with Full-width Video */}
+//       <div className="relative w-full bg-gradient-to-br from-gray-900 to-black">
+//         <div className="absolute inset-0 bg-black/60 z-0"></div>
+
+//         {/* Course Title and Info */}
+//         <div className="relative z-10 container mx-auto px-4 md:px-8 pt-12 lg:pt-16">
+//           {/* Course Stats */}
+//           {/* ... (rest of the code remains the same) ... */}
+
+//           {/* Video Player */}
+//           <div className="relative aspect-video w-full max-w-5xl mx-auto rounded-xl overflow-hidden shadow-2xl mb-8 pb-1">
+//             {!isPlaying ? (
+//               <div
+//                 className="relative h-full cursor-pointer group"
+//                 onClick={() => setIsPlaying(true)}
+//               >
+//                 <video
+//                   src="/sample-video.mp4"
+//                   // poster={courseData.thumbnail}
+//                   controls
+//                   className="w-full h-full object-cover"
+//                 />
+//                 <div className="absolute inset-0 flex items-center justify-center">
+//                   <div className="transform transition-all group-hover:scale-110">
+//                     {/* <PlayCircle className="w-20 h-20 md:w-24 md:h-24 text-white opacity-90 group-hover:opacity-100" /> */}
+//                     <p className="text-center text-white mt-4 font-medium">
+//                       {/* Preview this course */}
+//                     </p>
+//                   </div>
+//                 </div>
+//               </div>
+//             ) : (
+//               <video
+//                 src="/sample-video.mp4"
+//                 controls
+//                 className="w-full h-full"
+//               />
+//             )}
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* Course Content */}
+//       {/* ... (rest of the code remains the same) ... */}
+//     </div>
+//   );
+// };
+
+// export default Course;
