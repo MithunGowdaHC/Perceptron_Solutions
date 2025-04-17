@@ -110,6 +110,7 @@
 import React, { useRef, useEffect } from 'react';
 import './Details.css';
 import { BackgroundLines } from './ui/background-lines';
+import { Link } from 'react-router-dom';
 
 const Details = () => {
   const details = [
@@ -224,9 +225,11 @@ const Details = () => {
                   </ul>
 
                   <div className="mt-4 sm:mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4">
+                    <Link to={"/login"}>
                     <button className="w-full sm:flex-1 bg-gradient-to-r from-indigo-600 to-violet-600 text-white py-2 sm:py-2.5 px-4 rounded-lg sm:rounded-xl hover:from-indigo-700 hover:to-violet-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl text-sm sm:text-base">
                       Enroll Now
                     </button>
+                    </Link>
                     <button className="w-full sm:flex-1 border-2 border-indigo-100 text-gray-800 py-2 sm:py-2.5 px-4 rounded-lg sm:rounded-xl hover:bg-gray-50 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl text-sm sm:text-base">
                       Free Preview
                     </button>
